@@ -1,0 +1,240 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+body{
+    background: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height:1000px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow:0 35px 55px rgba(0,0, 0, 0.2);
+    margin:20px;
+
+}
+.container .left_side{
+    position:relative;
+    background: #681805;
+    padding:40px;
+    
+
+
+ }
+.profileText{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+    border-bottom:1px solid rgba(255,255,255, 0.2)
+    
+}
+.profileText .imgBox{
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.profileText .imgBox img{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+
+}
+.profileText h2{
+color:#fff;
+font-size: 1.7em;
+margin-top: 20px;
+text-transform: uppercase;
+text-align:center;
+line-height: 1.4em;
+font-weight: bold;
+}
+.profileText h2 span{
+    font-size: 0.6em;
+}
+.info{
+    padding-top: 10px;
+
+
+
+
+}
+.title{
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.info ul{
+    position: relative;
+}
+.info ul li{
+    position: relative;
+    list-style: none;
+    margin:10px 0;
+    cursor: pointer;
+    color:rgb(197, 200, 201);
+    font-weight: 800;
+}
+.icon{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color:white;
+
+}
+.education li{
+    list-style: none;
+    margin:20px 0;
+    
+}
+.education{
+    margin-top: 40px;
+}
+.education h5{
+    color:rgb(154, 168, 168);
+}
+.education h4:nth-child(2){
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.1vh;
+}
+.education h4{
+    color: #c4d3df;
+    font-weight: 300;
+}
+.info.language .percent{
+    position: relative;
+    width:100%;
+    height:6px;
+    background: #2b2a2a;
+    display: block;
+    margin-top: 5px;
+}
+
+.info.language .percent div{
+    position: absolute;    
+    height: 100%;
+    background: #998b96;
+
+}
+.right_side{
+    position: relative;
+    background:#fff;
+    padding: 40px;
+}
+.about{
+    margin: 50px 0;
+}
+.about p{
+    color: #c98877;
+    text-align: justify;
+}
+.about:last-child{
+    margin-bottom: 0px;
+
+}
+.title2{
+    color:#b32a07;
+    text-transform:uppercase ;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.about .box {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+.about .box .year-company{
+    min-width: 150px;
+    text-transform: uppercase;
+    color:#848c90 ;
+    font-weight:600;
+
+}
+.about .box  .text h4{
+    text-transform: uppercase;
+    color:#d64b28;
+    font-size: 16px;
+}
+.skills .box{
+    position:relative;
+    width:100%;
+    display: grid;
+    grid-template-columns:150px 1fr ;
+    justify-content: center;
+    align-items: center;
+
+}
+.skills .box h4{
+    text-transform: uppercase;
+    color:#848c99;
+    font-weight: 500;
+
+}
+.skills .box .percent{
+    position:relative;
+    width:100%;
+    height:10px;
+    background:#beb2b2;
+}
+.skills .box .percent div{
+    position: absolute;
+    height: 100%;
+    background:#c95235;
+}
+.interest ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.interest ul li{
+    list-style:disc;
+    color:#333;
+    font-weight: 500;
+    margin:10px 0;
+}
+
+@media (max-width:1000px){
+    .container{margin:10px;
+    grid-template-columns:repeat( 1,1fr);
+}
+.interest ul{
+    grid-template-columns: repeat(2,1fr);
+}
+
+}
+
+@media (max-width:600px)
+{
+    .about .box{
+        flex-direction: column;
+    }
+    .about .box .year-company{
+      margin-bottom:5px;
+
+    }
+    .interest ul{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .skills .box{
+        grid-template-columns: repeat(1,1fr);
+
+    }
+}
